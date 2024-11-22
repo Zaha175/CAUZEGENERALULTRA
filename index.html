@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Alcool</title>
+<style>
+/* ... (same CSS as before) ... */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    text-align: center; /* Zentriert den Button-Container */
+    margin-bottom: 20px;
+}
+
+#intrebare {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#intrebare:hover {
+    opacity: 0.8;
+}
+
+.raspuns-container {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Stil pentru containerul video */
+.video-container {
+    display: flex;
+    align-items: center; /* Aliniază video și text pe verticală */
+    margin-top: 20px; /* Spațiu deasupra videoclipului */
+}
+
+.video-container iframe {
+    margin-left: 20px; /* Spațiu între text și video */
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cauzele Consumului de Alcool</h1>
+        <div class="button-container">  
+            <button id="intrebare">De ce ați băut? Cauze?</button>
+        </div>
+        <div class="raspuns-container" >  </div>
+        <ul id="raspunsuri" style="display:none;">
+
+            <li>Cauza o văd în trecutul meu și se află în psihicul meu, în gândurile și sentimentele mele. În România, părinții mei s-au ocupat de mine și de sora mea, au avut timp pentru noi. La școală a fost bine, mi-a plăcut.</li>
+            <li>Apoi, din 2016 am venit în Germania, unde nu cunoșteam pe nimeni și nu înțelegeam limba. Mi-am pierdut grupul meu stabil de apartenentă și recunoaștere (familia și anturajul, prietena). M-am simțit singur și stresat.</li>
+            <li>Presiunea constantă în viața profesională, grijile economice, dorința de a mă dovedi, dorința de a uita de probleme, stresul, singurătatea m-au determinat să încep să beau alcool regulat.</li>
+            <li>Am început să beau cu colegii mei noi de lucru pentru a-mi reduce stresul și pentru a uita de probleme. În sfârșit, m-am simțit acceptat.</li>
+            <li>Acum, realizez că dorința mea de a fi acceptat și de a aparține m-a făcut să beau mai mult. Am încercat să le fac pe plac tuturor și să nu fiu respins.</li>
+            <li>Nu am putut spune niciodată "Nu!" Nu am vrut să-mi arăt slăbiciunile și nu am vrut să vorbesc cu nimeni despre problemele mele.</li>
+            <li>Am ajuns să nu mai am control asupra alcoolului.</li>
+
+        </ul>
+        <div class="video-container" style="display: none;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0vz2NO_auj0?si=Zk_cEeNxG1G7a3-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('intrebare').addEventListener('click', function() {
+            var raspunsuri = document.getElementById('raspunsuri');
+              var videoContainer = document.querySelector('.video-container');
+            if (raspunsuri.style.display === 'none') {
+                raspunsuri.style.display = 'block';
+                  videoContainer.style.display = 'flex';
+            } else {
+                raspunsuri.style.display = 'none';
+                 videoContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
